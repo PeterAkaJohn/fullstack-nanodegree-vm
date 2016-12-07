@@ -7,3 +7,20 @@
 -- these lines here.
 
 
+CREATE TABLE tournaments (
+    id          SERIAL PRIMARY KEY,
+    created     timestamp default now()
+  );
+
+CREATE TABLE players (
+    id SERIAL PRIMARY KEY,
+    name text NOT NULL,
+    tournament_id integer REFERENCES tournaments
+);
+
+CREATE TABLE matches (
+    id SERIAL PRIMARY KEY,
+    tournament_id integer REFERENCES tournaments(id),
+    winner integer REFERENCES players(id),
+    loser integer REFERENCES players(id)
+);

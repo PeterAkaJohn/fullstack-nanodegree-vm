@@ -11,4 +11,4 @@ Common code for the Relational Databases and Full Stack Fundamentals courses
 
  * next `cd /vagrant` followed by `cd tournament` and ultimately run `psql tournament` followed by `\i tournament.sql`
 
- * ctrl+z to exit the database and then run `python tournament_test.py`
+ * press ctrl+z and then run `python tournament_test.py`
